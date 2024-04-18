@@ -30,7 +30,7 @@ public class Card : MonoBehaviour
             // Flip Sound
         }
     }
-    public void SetCardFront()
+    public void SetCardFront(Sprite cardFront)
     {
         spriteRenderer.sprite = cardFront;
     }
@@ -39,5 +39,8 @@ public class Card : MonoBehaviour
     {
         spriteRenderer.sprite = cardBack;
     }
-
+    public void SetCardValue(int cardValue)
+    {
+        this.cardValue = cardValue;
+    }
 }
