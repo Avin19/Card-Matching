@@ -3,6 +3,7 @@
 
 
 ## To Do List 
+- [x] Added Simple Menu Scence
 - [ ] Ensure smooth gameplay with animations for card flipping and matching.
 - [ ] The system should allow continuous card flipping without requiring users to wait for card comparisons to finish before selecting additional cards.
 - [ ] Support various card layouts, such as 2x2, 2x3, 5x6, etc. The cards should scale to fit the

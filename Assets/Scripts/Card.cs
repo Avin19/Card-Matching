@@ -4,15 +4,40 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private int cardValue;
+    [SerializeField] private bool isFlipped = false;
+    [SerializeField] private bool canFlip = true;
+
+
+    [SerializeField] private Sprite cardBack;
+    [SerializeField] private Sprite cardFront;
+
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
+
+    private void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void FlipCard()
     {
-        
+        if (canFlip && !isFlipped)
+        {
+            isFlipped = true;
+            animator.SetTrigger("Flip");
+            // Flip Sound
+        }
     }
+    public void SetCardFront()
+    {
+        spriteRenderer.sprite = cardFront;
+    }
+
+    public void SetCardBack()
+    {
+        spriteRenderer.sprite = cardBack;
+    }
+
 }
